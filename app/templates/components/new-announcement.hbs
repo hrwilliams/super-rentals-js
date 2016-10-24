@@ -1,0 +1,18 @@
+{{#if addNewAnnouncement}}
+  <h1>New Announcement!</h1>
+  <form>
+      <div class="form-group">
+        <label for="news">News</label>
+        {{input value=news id="news"}}
+      </div>
+
+      <button {{action 'saveAnnouncement1'}}>Save</button>
+  </form>
+{{else}}
+  <button {{action 'announcementFormShow'}}>New Announcement</button>
+{{/if}}
+
+<hr>
+{{#link-to 'about'}}About{{/link-to}} |
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}} | 
+{{#link-to 'index'}}Home{{/link-to}}
